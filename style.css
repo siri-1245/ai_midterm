@@ -1,0 +1,363 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+background-color: wheat;
+ font-family: Arial, sans-serif;
+}
+.container {
+    display: grid;
+ grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+ grid-template-areas:
+        "nav nav nav nav"
+        "header header header header"
+        "persona papers hobbies books"
+        "blog blog blog blog"
+        "footer footer footer footer";
+    grid-gap: 10px;
+}
+nav {
+grid-area: nav;
+}
+nav ul {
+list-style: none;
+ display: flex;
+ justify-content: center;
+ background-color: darkolivegreen;
+padding: 10px;
+}
+
+nav ul li {
+margin-right: 20px;
+}
+
+nav ul li a {
+text-decoration: none;
+ color: white;
+font-weight: bold;
+ font-size: 20px;
+font-family: cursive;
+}
+
+.section {
+background-color: wheat;
+ border: 8px solid wheat;
+  padding: 20px;
+    
+}
+#persona {
+grid-area: persona;
+}
+#persona h2 {
+ background-color: darkolivegreen;
+ color: white;
+padding: 10px;
+}
+.persona-content {
+display: flex;
+align-items: center;
+}
+.persona-img {
+    max-width: 500px;
+height: 200px;
+    display: block;
+    margin-top: 20px;
+}
+#persona {
+grid-area: persona;
+ background-image: url('images/background1.jpg');
+background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center center;
+}
+.persona-text {
+ padding: 20px;
+ text-align: center;
+ color: white; 
+    font-size: 25px;
+    font-family: cursive; 
+    font-weight: bold; 
+}
+#papers {
+grid-area: papers;
+ background-color: darkolivegreen;
+background-image: url('images/bg22.jpg')
+}
+
+#papers h2 {
+ background-color: darkolivegreen;
+color: white;
+  padding: 10px;
+}
+.papers-slideshow {
+display: flex;
+ overflow: hidden;
+flex-direction: column; 
+  align-items: center; 
+justify-content: center;
+}
+.slideshow-controls button {
+margin: 0 10px; 
+ font-size: 16px; 
+ color: black; 
+  background-color: wheat; 
+ border: 2px solid black;
+ padding: 5px 10px;
+    cursor: pointer; 
+}
+.slideshow-controls button:hover {
+    background-color: grey; 
+color: white; 
+}
+.paper {
+text-align: center;
+  margin-right: 20px;
+    color: black; 
+  font-size: 25px;
+ font-family: cursive; 
+  font-weight: bold;
+}
+.paper img {
+    max-width: 100%;
+height: auto;
+    width: 250px; 
+height: 350px; 
+}
+.slideshow-controls {
+    display: flex;
+justify-content: center; 
+    margin-top: 10px; 
+}
+.slideshow-controls button {
+    margin: 0 10px; 
+}
+#hobbies {
+grid-area: hobbies;
+ background-color: #f9f9f9;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 10px; 
+    padding: 20px;
+}
+#hobbies h2 {
+background-color: wheat;
+color: darkolivegreen;
+padding: 10px;
+text-align: center;
+}
+.hobbies-list {
+    list-style: none;
+    padding: 0;
+}
+.hobby {
+    border: 2px solid darkolivegreen;
+padding: 10px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ color: black;
+ font-size: x-large;
+font-family: cursive;
+ font-weight: bold;
+    
+}
+.hobby p {
+margin-bottom: 10px;
+}
+.hobby img {
+max-width: 100%;
+ height: auto;
+}
+.hobbies-list img {
+ max-width: 150px; 
+  height: auto; 
+}
+#books {
+  grid-area: books;
+  background-color: white;
+}
+
+.book p {
+    font-family: 'Cursive', sans-serif;
+    
+}
+#books h2 {
+ background-color: darkolivegreen;
+ color: white;
+    padding: 10px;
+}
+.books-list {
+ display: flex;
+ flex-wrap: nowrap; 
+  justify-content: center; 
+ overflow-x: auto;   gap: 10px; 
+    margin-top: 10px; 
+}
+
+.book {
+    text-align: center; white-space: nowrap; 
+}
+
+.book img {
+    max-width: 100%;  height: auto;
+}
+
+.book img {
+    max-width: 100px;  max-height: 150px; 
+}
+
+.booktitle {
+    padding: 10px;
+}
+
+#blog {
+    grid-area: blog;
+ background-color: #eaeaea;
+}
+
+#blog h2 {
+    background-color: darkolivegreen;
+ color: white;
+ padding: 10px;
+}
+#blog {
+    font-family: cursive;
+}
+
+footer {
+    grid-area: footer;
+}
+
+#persona {
+display: grid;
+grid-template-areas:
+        "header"
+        "img"
+        "text";
+grid-template-rows: auto auto auto;
+ align-items: center;
+    justify-items: center;
+}
+
+.persona-header {
+ background-color: #333;
+    color: #fff;
+  padding: 10px;
+    text-align: center;
+}
+
+.persona-content {
+ margin-top: 20px;
+    display: flex;
+ flex-direction: column;
+    align-items: center;
+     justify-content: center;
+}
+
+.persona-img img {
+ max-width: 100%;
+height: auto;
+}
+
+.persona-text {
+padding: 20px;
+ text-align: center;
+}
+#image-collection {
+ grid-area: image-collection;
+ background-color: #f9f9f9;
+  padding: 20px;
+}
+
+#image-collection h2 {
+ background-color: darkolivegreen;
+ color: white;
+  padding: 10px;
+}
+
+.image-collection-grid {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr); 
+  gap: 10px; 
+}
+
+.image {
+ border: 2px solid #ccc;
+  padding: 10px;
+   text-align: center;
+ width: 250px; 
+height: 250px; 
+}
+
+.image img {
+ max-width: 100%;
+  max-height: 100%; 
+ width: 100%;
+height: 100%;
+}
+
+.image p {
+margin-top: 10px;
+}
+@media (max-width: 600px) {
+    
+#hobbies {
+grid-template-columns: repeat(1, 1fr);
+    }
+
+#image-collection .image-collection-grid {
+     grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+#image-collection .image img {
+max-width: 50%; 
+height: auto;
+    }
+
+    #books .books-list {
+     display: flex;
+     flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+#books .book {
+    width: calc(50% - 10px);
+    }
+
+.image-collection-grid {
+        display: grid;
+     grid-template-columns: repeat(1, 1fr);
+     gap: 20px;
+    }
+
+
+.image {
+     width: calc(100% - 20px); 
+    height: auto; 
+    }
+
+.image img {
+    max-width: 100%;
+max-height: 100%; 
+ width: 100%; 
+        height: 100%; 
+    }
+    
+    .persona-text {
+        font-size: 14px; 
+        white-space: normal; 
+        overflow-y: auto; 
+    }
+    .booktitle {
+        padding: 10px;
+        white-space: normal;
+    }
+    
+    
+    
+}
